@@ -6,13 +6,13 @@ A simple synchronous FIFO (First-In First-Out) buffer implemented in SystemVeril
 
 ## Features
 
-- ✅ Synchronous FIFO design in SystemVerilog  
-- ✅ Parameterizable data width and depth (can be easily extended)  
-- ✅ Standard FIFO status flags:
+- Synchronous FIFO design in SystemVerilog  
+- Parameterizable data width and depth (can be easily extended)  
+- Standard FIFO status flags:
   - `full`
   - `empty`
-- ✅ Self-checking testbench
-- ✅ Stimulus including:
+- Self-checking testbench
+- Stimulus including:
   - Reset behavior
   - Simple write/read sequences
   - Boundary conditions (full / empty behavior)
