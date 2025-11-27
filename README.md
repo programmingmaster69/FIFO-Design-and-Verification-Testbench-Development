@@ -11,7 +11,6 @@ A simple synchronous FIFO (First-In First-Out) buffer implemented in SystemVeril
 - ✅ Standard FIFO status flags:
   - `full`
   - `empty`
-  - (Optionally extensible to `almost_full`, `almost_empty`)
 - ✅ Self-checking testbench
 - ✅ Stimulus including:
   - Reset behavior
