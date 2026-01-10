@@ -22,3 +22,5 @@ A simple synchronous FIFO (First-In First-Out) buffer implemented in SystemVeril
 
 ---
 
+Sample Output and Successful verification check: <img width="449" height="381" alt="image" src="https://github.com/user-attachments/assets/4991dc46-063a-4189-a312-9f5f17cb48d7" />
+
