@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 28.11.2024 14:31:29
-// Design Name: 
-// Module Name: fifo
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module fifo(clk,rst,wdata,rdata,wr_en,rd_en,full,empty);
 input clk,rst,wr_en,rd_en;
@@ -27,7 +7,7 @@ input [7:0] wdata;
 output reg [7:0] rdata;
 
 reg [5:0] wr_ptr;
-reg [5:0] rd_ptr;
+reg [5:0] rd_ptr; // Additional bit to check if wr or rd pointer has looped around. (5 + 1)
 reg [7:0] mem[31:0];
 integer i;
 
@@ -76,6 +56,6 @@ end
 
 //Assigning value to Full and Empty
 assign empty = (rd_ptr == wr_ptr);
-assign full = ((wr_ptr[4:0] == rd_ptr[4:0]) && (wr_ptr[5]) != rd_ptr[5]);
+assign full = ((wr_ptr[4:0] == rd_ptr[4:0]) && (wr_ptr[5]) != rd_ptr[5]); // wr_ptr is at same place as rd_ptr but has looped around 1 time.
 
 endmodule
